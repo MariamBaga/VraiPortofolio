@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariam BAGAYOKO - CV Développeuse Full-Stack</title>
+    <!-- Font Awesome 6 (gratuit) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts : Inter + espace pour le style -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eef2f5;
+            font-family: 'Inter', sans-serif;
+            padding: 40px 20px;
+            color: #1e2a3e;
+        }
+
+        /* Conteneur principal style papier */
+        .cv-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.25);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* En-tête avec bandeau */
+        .cv-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 40px 40px 30px 40px;
+            color: white;
+        }
+
+        .name-title h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .badge-title {
+            background: rgba(59,130,246,0.3);
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            margin-top: 8px;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 28px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            background: rgba(255,255,255,0.08);
+            padding: 8px 18px;
+            border-radius: 60px;
+        }
+
+        .contact-item i {
+            font-size: 1.1rem;
+            color: #3b82f6;
+            width: 20px;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: #3b82f6;
+            text-decoration: underline;
+        }
+
+        /* Corps 2 colonnes */
+        .cv-body {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+
+        /* Colonne gauche */
+        .sidebar {
+            background: #f8fafc;
+            padding: 32px 28px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0f172a;
+            font-weight: 700;
+            margin-bottom: 18px;
+            border-left: 4px solid #3b82f6;
+            padding-left: 12px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .skill-tag {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        .lang-item, .interest-item {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #cbd5e1;
+            padding-bottom: 6px;
+        }
+
+        .interest-item {
+            border-bottom: none;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .interest-item i {
+            color: #3b82f6;
+            width: 24px;
+        }
+
+        /* Colonne droite */
+        .main-content {
+            padding: 32px 32px 32px 28px;
+        }
+
+        .exp-card {
+            margin-bottom: 28px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .exp-header h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .date {
+            font-size: 0.8rem;
+            background: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .exp-card ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .exp-card li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .project-title i {
+            color: #3b82f6;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 16px 0;
+            border-color: #e2e8f0;
+        }
+
+        /* responsive */
+        @media (max-width: 780px) {
+            .cv-body {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .cv-header {
+                padding: 30px 20px;
+            }
+            .name-title h1 {
+                font-size: 2rem;
+            }
+        }
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .contact-item a {
+                color: black;
+            }
+            .badge-title, .skill-tag {
+                background: #f1f5f9;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="cv-container">
+    <!-- HEADER avec coordonnées actualisées -->
+    <div class="cv-header">
+        <div class="name-title">
+            <h1>Mariam BAGAYOKO</h1>
+            <div class="badge-title">Développeuse Full-Stack | Architecture logicielle</div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-item"><i class="fas fa-phone-alt"></i> <span>+223 77 10 55 26</span></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:bagayokom2003@gmail.com">bagayokom2003@gmail.com</a></div>
+            <div class="contact-item"><i class="fab fa-github"></i> <a href="https://github.com/MariamBaga" target="_blank">github.com/MariamBaga</a></div>
+            <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mariam-bagayoko-a86253255/" target="_blank">linkedin.com/in/mariam-bagayoko</a></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> <span>Bamako - Sénou, Mali</span></div>
+        </div>
+    </div>
+
+    <div class="cv-body">
+        <!-- COLONNE GAUCHE : compétences, langues, atouts -->
+        <div class="sidebar">
+            <div class="section">
+                <h3><i class="fas fa-code"></i> Compétences techniques</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML5/CSS3</span>
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">PHP / Laravel</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">API REST (Laravel/Sanctum)</span>
+                    <span class="skill-tag">WordPress</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Angular (app mobile)</span>
+                    <span class="skill-tag">Flutter (en cours)</span>
+                    <span class="skill-tag">Django (apprentissage rapide)</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3><i class="fas fa-rocket"></i> Adaptabilité</h3>
+                <p style="font-size: 0.85rem; margin-bottom: 12px;">Curiosité & montée en compétence express :</p>
+                <div class="skills-list">
+                    <span class="skill-tag">⚡ Autoformation</span>
+                    <span class="skill-tag">📱 Veille techno</span>
+                    <span class="skill-tag">🧠 Agile / Scrum</span>
+                </div>
+                <p style="font-size: 0.85rem; margin-top: 10px; font-style: italic; color: #334155;">« Même sans expérience préalable, je maîtrise un outil en quelques jours. »</p>
+            </div>
+
+            <div class="section">
+                <h3><i class="fas fa-language"></i> Langues</h3>
+                <div class="lang-item"><span>Français</span> <span style="font-weight:500;">Courant</span></div>
+                <div class="lang-item"><span>Anglais</span> <span style="font-weight:500;">Intermédiaire (technique)</span></div>
+            </div>
+
+            <div class="section">
+                <h3><i class="fas fa-heart"></i> Centres d'intérêt</h3>
+                <div class="interest-item"><i class="fas fa-microchip"></i> Innovation numérique</div>
+                <div class="interest-item"><i class="fas fa-chalkboard-user"></i> Développement de nouvelles compétences</div>
+                <div class="interest-item"><i class="fas fa-database"></i> Architecture & scalabilité</div>
+            </div>
+        </div>
+
+        <!-- COLONNE DROITE : expériences & projets -->
+        <div class="main-content">
+            <!-- Expérience récente Connectixx -->
+            <div class="section">
+                <h3><i class="fas fa-briefcase"></i> Expérience professionnelle</h3>
+                
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <h4>Développeuse Full-Stack</h4>
+                        <div class="date">2025 – Présent (6 mois)</div>
+                    </div>
+                    <div class="company">Connectixx – Projets d’envergure</div>
+                    <ul>
+                        <li>Réalisation de 5 projets complets : OptimuX FTTH (gestion fibre), CAPFeedMe (agro-pastorale), DocuFlow GED (électronique de documents), MyBusiness SaaS (marketplace), FermeManager ERP.</li>
+                        <li>Architecture Laravel, gestion des rôles/permissions, développement de tableaux de bord analytiques.</li>
+                        <li>Mise en place d’APIs sécurisées et intégration de paiements mobiles.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <h4>Développeuse Mobile (API & data)</h4>
+                        <div class="date">Fév 2025 – Juin 2025</div>
+                    </div>
+                    <div class="company">CGTECH – 5 mois</div>
+                    <ul>
+                        <li>Collaboration technique pour alimenter des applications mobiles (Flutter / Angular).</li>
+                        <li>Création d’endpoints REST optimisés et documentation swagger.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <h4>Développeuse Web (Laravel)</h4>
+                        <div class="date">Juin 2024 – Sept 2024</div>
+                    </div>
+                    <div class="company">Ibraci Links – Stage</div>
+                    <ul>
+                        <li>Plateforme d’enregistrement de noms de domaine avec paiement Orange Money.</li>
+                        <li>API REST (authentification, multi-rôles) et tableau de bord admin.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projets phares (listés) -->
+            <div class="section">
+                <h3><i class="fas fa-laptop-code"></i> Projets majeurs (réalisés)</h3>
+                <div class="project-item">
+                    <div class="project-title"><i class="fas fa-fiber-new"></i> OptimuX FTTH</div>
+                    <p>Gestion complète des dossiers de raccordement fibre optique : suivi terrain, contraintes techniques, rapports, API mobile.</p>
+                </div>
+                <div class="project-item">
+                    <div class="project-title"><i class="fas fa-tractor"></i> CAPFeedMe & FermeManager ERP</div>
+                    <p>Plateforme agro-pastorale (e-commerce, formations, réservations) + ERP agricole complet (élevage, parcelles, ventes).</p>
+                </div>
+                <div class="project-item">
+                    <div class="project-title"><i class="fas fa-folder-open"></i> DocuFlow GED</div>
+                    <p>Gestion électronique de documents, workflows, versioning, archivage et permissions avancées.</p>
+                </div>
+                <div class="project-item">
+                    <div class="project-title"><i class="fas fa-chart-line"></i> MyBusiness SaaS</div>
+                    <p>Marketplace avec publicité intégrée, dashboards partenaires et analytics.</p>
+                </div>
+            </div>
+
+            <!-- Formation -->
+            <div class="section">
+                <h3><i class="fas fa-graduation-cap"></i> Formation</h3>
+                <div class="exp-card" style="margin-bottom: 12px;">
+                    <div class="exp-header"><h4>Licence professionnelle en génie informatique</h4><div class="date">2021 – 2025</div></div>
+                    <div class="company">Institut des Sciences Appliquées, Bamako</div>
+                </div>
+                <div class="exp-card" style="margin-bottom: 12px;">
+                    <div class="exp-header"><h4>Attestation Développement Web</h4><div class="date">2024 – 2025</div></div>
+                    <div class="company">Orange Digital Center</div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-header"><h4>Stage Développement Web</h4><div class="date">2024 – 2025</div></div>
+                    <div class="company">Ibraci Links – perfectionnement Laravel & API</div>
+                </div>
+            </div>
+
+            <hr>
+            <div style="font-size: 0.75rem; text-align: center; color: #5b6e8c; margin-top: 10px;">
+                <i class="fas fa-sync-alt"></i> Veille active • Adaptation rapide • disponible pour mission freelance ou CDD
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
