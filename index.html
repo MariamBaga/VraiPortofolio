@@ -816,6 +816,14 @@
                 display: none !important;
             }
         }
+
+        /* Cacher le bouton CV dans le header sur mobile */
+/* Sur mobile, cacher le bouton CV du header */
+@media (max-width: 991px) {
+    .header-cv-btn {
+        display: none !important;
+    }
+}
     </style>
 </head>
 
@@ -896,12 +904,13 @@
                         </div>
                     </div>
                     <div class="hero-btn" style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        
-                        <a href="#contact" class="theme-btn"
-                            style="background: transparent; border: 1px solid var(--primary-color);">
-                            Me contacter
-                        </a>
-                    </div>
+    <a href="moncv.pdf" class="theme-btn header-cv-btn" target="_blank">
+        <i class="fas fa-file-alt"></i> Voir mon CV
+    </a>
+    <a href="#contact" class="theme-btn" style="background: transparent; border: 1px solid var(--primary-color);">
+        Me contacter
+    </a>
+</div>
                     <div class="sidebar__toggle">
         <span></span>
         <span></span>
