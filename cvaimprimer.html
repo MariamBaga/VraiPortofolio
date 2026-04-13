@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariam BAGAYOKO - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e8e8e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+            font-family: 'Segoe UI', 'Calibri', 'Times New Roman', Arial, sans-serif;
+        }
+
+        /* Style exactement comme l'image : une seule colonne, sobre */
+        .cv {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 40px 45px;
+            margin: 0 auto;
+        }
+
+        /* En-tête */
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #1e3a5f;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .profile-text {
+            font-size: 13px;
+            line-height: 1.45;
+            color: #222;
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+
+        /* Ligne d'infos (ville, tel, email) */
+        .info-line {
+            font-size: 12px;
+            color: #222;
+            margin-bottom: 8px;
+            border-top: 1px solid #ccc;
+            padding-top: 12px;
+        }
+
+        .info-line span, .info-line a {
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+
+        .info-line a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .info-line a:hover {
+            text-decoration: underline;
+        }
+
+        /* section titre (PARCOURS PROFESSIONNEL, etc) */
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 20px 0 12px 0;
+            border-bottom: 2px solid #000;
+            padding-bottom: 4px;
+        }
+
+        /* Expérience */
+        .exp-item {
+            margin-bottom: 18px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .exp-company {
+            font-style: italic;
+            font-weight: 500;
+            font-size: 13px;
+            margin: 3px 0 6px 0;
+            color: #1e3a5f;
+        }
+
+        .exp-list {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .exp-list li {
+            font-size: 12.5px;
+            line-height: 1.4;
+            margin-bottom: 5px;
+        }
+
+        /* Compétences (en ligne comme sur l'image) */
+        .skills-block {
+            margin-bottom: 8px;
+        }
+
+        .skills-cat {
+            font-weight: 700;
+            font-size: 13px;
+            display: inline-block;
+            min-width: 160px;
+            vertical-align: top;
+        }
+
+        .skills-text {
+            display: inline;
+            font-size: 13px;
+        }
+
+        /* Ligne séparatrice pour les langues */
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            padding: 4px 0;
+            border-bottom: 1px dotted #ddd;
+            max-width: 300px;
+        }
+
+        .footer-note {
+            font-size: 10px;
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+
+        /* Pour l'impression : une seule page */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .cv {
+                box-shadow: none;
+                padding: 0.4in 0.5in;
+                max-width: 100%;
+            }
+            .info-line a {
+                color: black;
+                text-decoration: none;
+            }
+            .section-title {
+                margin: 12px 0 8px 0;
+            }
+            .exp-item {
+                margin-bottom: 12px;
+            }
+        }
+
+        /* responsive */
+        @media (max-width: 650px) {
+            .cv {
+                padding: 20px;
+            }
+            .info-line span, .info-line a {
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+            .skills-cat {
+                display: block;
+                margin-bottom: 4px;
+            }
+            .skills-text {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="cv">
+    <!-- En-tête identique à l'image -->
+    <div class="name">Mariam BAGAYOKO</div>
+    <div class="job-title">DÉVELOPPEUSE FULL-STACK</div>
+    <div class="profile-text">
+        Développeuse Full-Stack passionnée avec une solide expérience dans la conception d'applications web robustes. Capacité d'adaptation rapide aux nouvelles technologies et forte appétence pour l'innovation numérique. Rigoureuse, autonome et orientée résultats.
+    </div>
+    <div class="info-line">
+        <span>📍 Bamako - Sénou, Mali</span>
+        <span>📞 +223 77 10 55 26</span>
+        <span>📧 bagayokom2003@gmail.com</span>
+        <span><a href="https://www.linkedin.com/in/mariam-bagayoko-a86253255/" target="_blank">🔗 linkedin.com/in/mariam-bagayoko</a></span>
+    </div>
+    <div class="info-line" style="border-top: none; padding-top: 0;">
+        <span>🌐 <a href="https://mariam-portfolio-cv.vercel.app/" target="_blank">mariam-portfolio-cv.vercel.app</a></span>
+    </div>
+
+    <!-- PARCOURS PROFESSIONNEL -->
+    <div class="section-title">PARCOURS PROFESSIONNEL</div>
+
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Développeuse Full-Stack</span>
+            <span>Septembre 2025 - Présent</span>
+        </div>
+        <div class="exp-company">Connectixx · Côte d'Ivoire (Freelance)</div>
+        <ul class="exp-list">
+            <li>Réalisation de 5 projets complets : OptimuX FTTH (gestion fibre optique), CAPFeedMe (plateforme agro-pastorale), DocuFlow GED (gestion électronique de documents), MyBusiness (marketplace SaaS), FermeManager ERP (gestion agricole).</li>
+            <li>Conception d'architectures Laravel robustes.</li>
+            <li>Développement d'API REST sécurisées avec Laravel Sanctum.</li>
+            <li>Mise en place de systèmes multi-utilisateurs avec rôles et permissions.</li>
+        </ul>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Développeuse Mobile</span>
+            <span>Février 2025 - Juillet 2025</span>
+        </div>
+        <div class="exp-company">CGTECH · Bamako (Stage)</div>
+        <ul class="exp-list">
+            <li>Collaboration avec l'équipe technique pour alimenter les applications mobiles.</li>
+            <li>Création et optimisation d'APIs REST pour besoins mobile.</li>
+            <li>Documentation technique des endpoints.</li>
+        </ul>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Développeuse Web (Stage)</span>
+            <span>Juin 2024 - Septembre 2024</span>
+        </div>
+        <div class="exp-company">Ibraci Links · Bamako</div>
+        <ul class="exp-list">
+            <li>Développement d'une plateforme d'enregistrement de noms de domaine.</li>
+            <li>Intégration des paiements via Orange Money.</li>
+            <li>Création d'API REST avec authentification sécurisée.</li>
+        </ul>
+    </div>
+
+    <!-- COMPÉTENCES (comme dans le visuel, en texte continu) -->
+    <div class="section-title">COMPÉTENCES</div>
+    <div class="skills-block">
+        <span class="skills-cat">Langages :</span>
+        <span class="skills-text">HTML, CSS, JavaScript, PHP, TypeScript, Java</span>
+    </div>
+    <div class="skills-block">
+        <span class="skills-cat">Frameworks & CMS :</span>
+        <span class="skills-text">Laravel, WordPress, Angular (notions), Flutter (en cours)</span>
+    </div>
+    <div class="skills-block">
+        <span class="skills-cat">Base de données :</span>
+        <span class="skills-text">MySQL</span>
+    </div>
+    <div class="skills-block">
+        <span class="skills-cat">Outils & Méthodologies :</span>
+        <span class="skills-text">Git & GitHub, MySQL Workbench, Postman, phpMyAdmin, Insomnia, Figma</span>
+    </div>
+
+    <!-- FORMATION -->
+    <div class="section-title">FORMATION</div>
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Licence professionnelle en génie informatique</span>
+            <span>Oct 2021 - Jan 2025</span>
+        </div>
+        <div class="exp-company">Institut des Sciences Appliquées · Kabala, Mali — Mention Bien</div>
+    </div>
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Attestation en Développement web</span>
+            <span>Août 2024 - Sept 2025</span>
+        </div>
+        <div class="exp-company">Orange Digital Center · Bamako, Mali</div>
+    </div>
+
+    <!-- LANGUES -->
+    <div class="section-title">LANGUES</div>
+    <div class="lang-item"><span>Français</span> <span>Courant</span></div>
+    <div class="lang-item"><span>Anglais</span> <span>Intermédiaire (technique)</span></div>
+
+    <div class="footer-note">
+        ⚡ Adaptation rapide · disponible pour mission freelance ou CDD
+    </div>
+</div>
+</body>
+</html>
