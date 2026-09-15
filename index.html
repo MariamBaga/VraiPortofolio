@@ -818,12 +818,11 @@
         }
 
         /* Cacher le bouton CV dans le header sur mobile */
-/* Sur mobile, cacher le bouton CV du header */
-@media (max-width: 991px) {
-    .header-cv-btn {
-        display: none !important;
-    }
-}
+        @media (max-width: 991px) {
+            .header-cv-btn {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -904,18 +903,18 @@
                         </div>
                     </div>
                     <div class="hero-btn" style="display: flex; gap: 15px; flex-wrap: wrap;">
-    <a href="moncv.pdf" class="theme-btn header-cv-btn" target="_blank">
-        <i class="fas fa-file-alt"></i> Voir mon CV
-    </a>
-    <a href="#contact" class="theme-btn" style="background: transparent; border: 1px solid var(--primary-color);">
-        Me contacter
-    </a>
-</div>
+                        <a href="moncv.pdf" class="theme-btn header-cv-btn" target="_blank">
+                            <i class="fas fa-file-alt"></i> Voir mon CV
+                        </a>
+                        <a href="#contact" class="theme-btn" style="background: transparent; border: 1px solid var(--primary-color);">
+                            Me contacter
+                        </a>
+                    </div>
                     <div class="sidebar__toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -933,13 +932,19 @@
                                     <div class="hero-left-content">
                                         <ul>
                                             <li>
-                                                <p><span>=></span> Développement Full-Stack</p>
+                                                <p><span>=></span> Développement Full-Stack Web & Mobile</p>
                                             </li>
                                             <li>
-                                                <p><span>=></span> Architecture Logicielle</p>
+                                                <p><span>=></span> PHP / Laravel / Angular / Flutter</p>
                                             </li>
                                             <li>
-                                                <p><span>=></span> Solutions d'Entreprise</p>
+                                                <p><span>=></span> API REST & Bases de données MySQL</p>
+                                            </li>
+                                            <li>
+                                                <p><span>=></span> WordPress & Intégration Web</p>
+                                            </li>
+                                            <li>
+                                                <p><span>=></span> Gestion de projets & Documentation technique</p>
                                             </li>
                                         </ul>
                                         <div class="social-icon">
@@ -962,9 +967,12 @@
                                 <div
                                     class="col-xl-3 col-lg-6 col-md-12 order-1 wow animate__animated animate__fadeInUp">
                                     <div class="hero-right-content">
-                                        <p>Développeuse Full-Stack avec une solide expérience dans la conception
-                                            d'applications web robustes, de la base de données à l'interface
-                                            utilisateur.</p>
+                                        <p>Développeuse Full-Stack titulaire d'une Licence professionnelle en Génie
+                                            Informatique, avec une expérience professionnelle en développement de
+                                            solutions web et mobiles en environnement full remote.</p>
+                                        <p>Expérience concrète en conception, développement, déploiement, maintenance
+                                            et évolution d'applications avec PHP, Laravel, Angular, JavaScript, Flutter,
+                                            MySQL, SQL et API REST.</p>
                                         <div class="hero-btn">
                                             <a href="#contact" class="theme-btn">
                                                 Me contacter
@@ -988,13 +996,28 @@
                             <div class="col-xl-6 col-lg-6 wow animate__animated animate__fadeInUp">
                                 <div class="about-content-2">
                                     <p class="about-text">
-                                        Passionnée par le développement logiciel, j'accompagne les entreprises dans leur
-                                        transformation digitale en livrant des applications sur mesure, performantes et
-                                        évolutives.
+                                        Développeuse Full-Stack titulaire d'une Licence professionnelle en Génie
+                                        Informatique, avec une expérience professionnelle dans le développement de
+                                        solutions web et mobiles en environnement full remote.
                                         <br>
                                         <span class="mt-3 d-block">
-                                            Mon expertise couvre l'ensemble du cycle de vie d'un projet : analyse des
-                                            besoins, architecture technique, développement, déploiement et maintenance.
+                                            Expérience concrète en conception, développement, déploiement, maintenance
+                                            et évolution d'applications avec PHP, Laravel, Angular, JavaScript, Flutter,
+                                            MySQL, SQL et API REST.
+                                        </span>
+                                        <span class="mt-3 d-block">
+                                            Contribution à plusieurs solutions professionnelles utilisées en production
+                                            dans des domaines variés : gestion d'entreprise, fibre optique, gestion
+                                            électronique des documents et secteur agro-pastoral.
+                                        </span>
+                                        <span class="mt-3 d-block">
+                                            À l'aise sur le développement backend, l'intégration d'interfaces web et
+                                            mobiles, la conception d'API REST et la gestion des bases de données.
+                                            Expérience complémentaire en WordPress et bases en Java.
+                                        </span>
+                                        <span class="mt-3 d-block">
+                                            Autonome, rigoureuse et dotée d'un bon esprit d'analyse, avec une forte
+                                            capacité d'adaptation et d'apprentissage de nouvelles technologies.
                                         </span>
                                     </p>
                                     <div class="counter-area">
@@ -1018,6 +1041,39 @@
                                     <img src="img/maphotosansarriere.png" alt="Mariam BAGAYOKO">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tech Stack Section -->
+                <section class="tech-stack-section section-padding fix">
+                    <div class="container">
+                        <div class="section-title text-center">
+                            <span class="sub-title">{ Compétences }</span>
+                            <h2 class="style-2">Stack <span>technique</span></h2>
+                        </div>
+                        <div class="stack-list">
+                            <span class="stack-icon">PHP / Laravel</span>
+                            <span class="stack-icon">Angular</span>
+                            <span class="stack-icon">JavaScript</span>
+                            <span class="stack-icon">Flutter</span>
+                            <span class="stack-icon">API REST</span>
+                            <span class="stack-icon">MySQL / SQL</span>
+                            <span class="stack-icon">MySQL Workbench</span>
+                            <span class="stack-icon">HTML5 / CSS3</span>
+                            <span class="stack-icon">Bootstrap</span>
+                            <span class="stack-icon">WordPress</span>
+                            <span class="stack-icon">Java</span>
+                            <span class="stack-icon">Python / Django</span>
+                            <span class="stack-icon">Git / GitHub</span>
+                            <span class="stack-icon">Linux / Ubuntu</span>
+                            <span class="stack-icon">Insomnia / Postman</span>
+                            <span class="stack-icon">AdminLTE</span>
+                            <span class="stack-icon">Capacitor</span>
+                            <span class="stack-icon">Figma</span>
+                            <span class="stack-icon">Electron</span>
+                            <span class="stack-icon">Vue.js</span>
+                            <span class="stack-icon">React Native</span>
                         </div>
                     </div>
                 </section>
@@ -1046,12 +1102,11 @@
                             </div>
                             <div class="col-xxl-7 col-xl-6 col-lg-6 wow animate__animated animate__fadeInUp">
                                 <p class="project-text mt-3">
-                                    Solution complète pour opérateurs télécoms permettant le suivi des dossiers FTTH, la
-                                    gestion des équipes terrain,
-                                    le traitement des contraintes techniques (PBO saturé, zone dépourvue, dépassement
-                                    linéaire) et la génération
-                                    de rapports analytiques. Intègre un système de tickets, des notifications en temps
-                                    réel.
+                                    Solution complète pour opérateurs télécoms permettant le suivi des dossiers FTTH,
+                                    la gestion des équipes terrain, le traitement des contraintes techniques (PBO
+                                    saturé, zone dépourvue, dépassement linéaire) et la génération de rapports
+                                    analytiques. Intègre un système de tickets, des notifications en temps réel et
+                                    une gestion fine des rôles et permissions.
                                 </p>
                             </div>
 
@@ -1076,7 +1131,8 @@
                                     </div>
                                     <div class="project-left-content">
                                         <h3 class="title"><a href="#">Espace Vert & Formations</a></h3>
-                                        <p>Modules de réservation, formations et événements intégrés</p>
+                                        <p>Modules de réservation, formations et événements intégrés, gestion et suivi
+                                            de la plateforme, maintenance et évolution.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1102,7 +1158,8 @@
                                     </div>
                                     <div class="project-left-content">
                                         <h3 class="title"><a href="#">Workflow & Archivage</a></h3>
-                                        <p>Circuits de validation, versioning et archivage intelligent</p>
+                                        <p>Circuits de validation, versioning et archivage intelligent. Développement de
+                                            fonctionnalités dédiées à la gestion et à l'organisation documentaire.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1120,7 +1177,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xxl-5 col-xl-6 col-lg-6 wow animate__animated animate__fadeInUp">
+                            <div class="col-xxl-7 col-xl-6 col-lg-6 wow animate__animated animate__fadeInUp">
                                 <div class="project-thumb-items-2 mt-4">
                                     <div class="thumb">
                                         <img src="https://placehold.co/600x400/111827/3b82f6?text=FermeManager+ERP"
@@ -1128,9 +1185,37 @@
                                     </div>
                                     <div class="project-left-content">
                                         <h3 class="title"><a href="#">FermeManager ERP</a></h3>
-                                        <p>Gestion agricole et d'élevage intégrale</p>
+                                        <p>Gestion agricole et d'élevage intégrale. Application pour entrepreneurs,
+                                            PME, boutiques et professionnels : contribution aux interfaces Angular et
+                                            aux fonctionnalités de gestion et de suivi de performance. Fonctionnalité
+                                            de commande par QR Code.</p>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- Projet 5: Plateforme d'enregistrement de noms de domaine -->
+                            <div class="col-xl-12 wow animate__animated animate__fadeInUp">
+                                <div class="project-video-image-2 fix mt-5">
+                                    <img src="https://placehold.co/1200x600/111827/3b82f6?text=Plateforme+Noms+de+Domaine"
+                                        alt="Plateforme d'enregistrement de noms de domaine">
+                                </div>
+                            </div>
+                            <div class="col-xxl-5 col-xl-6 col-lg-6 wow animate__animated animate__fadeInUp">
+                                <div class="project-left-content">
+                                    <h3 class="title"><a href="#">Plateforme d'enregistrement de noms de domaine</a>
+                                    </h3>
+                                    <p>Projet de fin de formation — Laravel 11 et MySQL</p>
+                                </div>
+                            </div>
+                            <div class="col-xxl-7 col-xl-6 col-lg-6 wow animate__animated animate__fadeInUp">
+                                <p class="project-text mt-3">
+                                    Développement Back-End avec Laravel 11 ; gestion des données avec MySQL et MySQL
+                                    Workbench. Développement et test d'API avec Insomnia, intégration de l'API
+                                    développeur Name.com et d'un système de paiement avec VitePay. Développement de
+                                    l'interface avec Bootstrap et mise en place d'un environnement de test des e-mails
+                                    avec MailDev. Intégration du système de paiement Orange Money et mise en place d'un
+                                    système multi-utilisateurs avec gestion des rôles et permissions.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1146,34 +1231,96 @@
                         <div class="row">
                             <div class="col-xl-4 col-lg-6 col-md-6 wow animate__animated animate__fadeInUp">
                                 <div class="waypoint-box-items">
-                                    <span>Connectixx - 6 mois</span>
+                                    <span>ConnectiiX - Télétravail depuis Bamako, Mali</span>
                                     <h3 class="title">Développeuse Full-Stack</h3>
-                                    <p>• Réalisation de projets complets : OptimuX FTTH, CAPFeedMe, DocuFlow GED,
-                                        MyBusiness Marketplace, FermeManager ERP.<br>
-                                        • Conception d'architectures robustes et de solutions d'entreprise sur mesure.
-                                    </p>
-                                    <h4>2025 - Présent</h4>
+                                    <p>• Développement, déploiement et maintenance de solutions digitales web et
+                                        mobiles utilisées en production.<br>
+                                        • Développement backend avec PHP et Laravel.<br>
+                                        • Développement et intégration d'interfaces avec Angular et JavaScript.<br>
+                                        • Conception et intégration d'API REST.<br>
+                                        • Conception, manipulation et gestion de bases de données MySQL / SQL.<br>
+                                        • Maintenance corrective et évolutive des applications.<br>
+                                        • Correction de bugs et résolution de problèmes techniques en environnement de
+                                        production.<br>
+                                        • Travail à distance avec une équipe technique basée en Côte d'Ivoire.<br>
+                                        • Contribution à plusieurs projets simultanément.<br>
+                                        • Rédaction de documentation technique claire, destinée à un usage
+                                        collaboratif.<br>
+                                        • Participation à l'analyse des besoins fonctionnels et au paramétrage de
+                                        modules.<br>
+                                        • Mise en place de systèmes multi-utilisateurs avec gestion fine des rôles et
+                                        permissions.</p>
+                                    <h4>Août 2025 – Août 2026</h4>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-6 wow animate__animated animate__fadeInUp">
                                 <div class="waypoint-box-items style-2">
-                                    <span>CGTECH - 5 mois</span>
+                                    <span>CGTECH - Bamako, Mali</span>
                                     <h3 class="title">Développeuse Mobile</h3>
-                                    <p>• Collaboration avec l'équipe technique pour fournir les données nécessaires aux
-                                        applications mobiles.<br>
-                                        • Création et optimisation d'API pour les besoins mobile.</p>
-                                    <h4>2025</h4>
+                                    <p>• Participation au développement d'applications mobiles et aux échanges avec les
+                                        services backend.<br>
+                                        • Création et optimisation d'API REST dédiées aux besoins des applications
+                                        mobiles.<br>
+                                        • Rédaction de documentation technique des fonctionnalités pour faciliter leur
+                                        intégration.<br>
+                                        • Coordination avec l'équipe technique pour le suivi des livrables et le respect
+                                        des échéances.</p>
+                                    <h4>Février 2025</h4>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-6 wow animate__animated animate__fadeInUp">
                                 <div class="waypoint-box-items style-3">
-                                    <span>Ibraci Links - 3 mois</span>
-                                    <h3 class="title">Développeuse Web</h3>
-                                    <p>• Développement d'une plateforme d'enregistrement de noms de domaine avec
-                                        intégration des paiements Orange Money.<br>
-                                        • Création d'API REST avec Laravel et système multi-utilisateurs avec rôles et
-                                        permissions.</p>
-                                    <h4>2024</h4>
+                                    <span>Ibraci Links - Bamako, Mali</span>
+                                    <h3 class="title">Développeuse Web — Stage</h3>
+                                    <p>• Développement d'une plateforme web d'enregistrement de noms de domaine, de la
+                                        conception à la mise en production, en PHP, Laravel, HTML, CSS et
+                                        JavaScript.<br>
+                                        • Conception et gestion de la base de données MySQL, intégration d'API REST avec
+                                        authentification sécurisée.<br>
+                                        • Intégration du système de paiement Orange Money et mise en place d'un système
+                                        multi-utilisateurs avec gestion des rôles et permissions.<br>
+                                        • Développement et intégration de fonctionnalités web.<br>
+                                        • Conception et intégration d'interfaces utilisateurs.<br>
+                                        • Participation à la correction de problèmes techniques.<br>
+                                        • Amélioration et évolution des fonctionnalités existantes.<br>
+                                        • Suivi d'un projet de bout en bout, de la conception à la mise en
+                                        production.<br>
+                                        • Organisation d'un système multi-utilisateurs avec gestion des rôles et
+                                        permissions.<br>
+                                        • Gestion de données sensibles avec un souci constant de fiabilité et de
+                                        confidentialité.</p>
+                                    <h4>Juin 2024 – Septembre 2024</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Formation Section -->
+                <section class="career-waypoint-section section-padding fix">
+                    <div class="container">
+                        <div class="section-title">
+                            <span class="sub-title">{ Formation }</span>
+                            <h2 class="style-2">Parcours <span>académique</span></h2>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6 col-lg-6 wow animate__animated animate__fadeInUp">
+                                <div class="waypoint-box-items">
+                                    <span>Licence Professionnelle</span>
+                                    <h3 class="title">Génie Informatique</h3>
+                                    <p>Institut Supérieur d'Administration (ISA) / USTTB — Bamako, Mali<br>
+                                        Formation en développement logiciel, programmation, bases de données, réseaux et
+                                        systèmes informatiques.</p>
+                                    <h4>2021 – 2025</h4>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 wow animate__animated animate__fadeInUp">
+                                <div class="waypoint-box-items">
+                                    <span>Attestation</span>
+                                    <h3 class="title">Développement Web</h3>
+                                    <p>Orange Digital Center — Bamako, Mali<br>
+                                        Développement web, WordPress, conception et intégration de sites web.</p>
+                                    <h4>2024 – 2025</h4>
                                 </div>
                             </div>
                         </div>
@@ -1197,8 +1344,7 @@
                                     <p style="max-width: 800px; margin: 0 auto 30px auto;">
                                         Passionnée par l'innovation, je me forme en continu aux nouvelles technologies.
                                         Même sans expérience préalable sur un outil, je suis capable de le maîtriser
-                                        rapidement
-                                        grâce à ma curiosité et ma rigueur.
+                                        rapidement grâce à ma curiosité et ma rigueur.
                                     </p>
                                     <div
                                         style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 25px;">
@@ -1210,10 +1356,9 @@
                                             style="background: rgba(59,130,246,0.15); padding: 12px 25px; border-radius: 50px;">
                                             <i class="fab fa-angular"></i> Angular
                                         </div>
-
                                         <div
                                             style="background: rgba(59,130,246,0.15); padding: 12px 25px; border-radius: 50px;">
-                                            <i class="fab fa-figma"></i> Laravel
+                                            <i class="fab fa-laravel"></i> Laravel
                                         </div>
                                         <div
                                             style="background: rgba(59,130,246,0.15); padding: 12px 25px; border-radius: 50px;">
@@ -1235,12 +1380,100 @@
                                             style="background: rgba(59,130,246,0.15); padding: 12px 25px; border-radius: 50px;">
                                             <i class="fab fa-vuejs"></i> Vue.js
                                         </div>
+                                        <div
+                                            style="background: rgba(59,130,246,0.15); padding: 12px 25px; border-radius: 50px;">
+                                            <i class="fas fa-laptop-code"></i> Electron
+                                        </div>
+                                        <div
+                                            style="background: rgba(59,130,246,0.15); padding: 12px 25px; border-radius: 50px;">
+                                            <i class="fas fa-database"></i> Odoo (en apprentissage)
+                                        </div>
+                                        <div
+                                            style="background: rgba(59,130,246,0.15); padding: 12px 25px; border-radius: 50px;">
+                                            <i class="fas fa-file-excel"></i> Excel (TCD, RECHERCHEV)
+                                        </div>
+                                        <div
+                                            style="background: rgba(59,130,246,0.15); padding: 12px 25px; border-radius: 50px;">
+                                            <i class="fas fa-tasks"></i> Gestion de projet
+                                        </div>
                                     </div>
                                     <div class="mt-4 pt-3">
                                         <span class="badge"
                                             style="background: var(--primary-color); padding: 8px 20px; border-radius: 30px;">
                                             ⚡ Apprentissage ultra-rapide
                                         </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Soft Skills Section -->
+                <section class="career-waypoint-section section-padding fix">
+                    <div class="container">
+                        <div class="section-title">
+                            <span class="sub-title">{ Atouts }</span>
+                            <h2 class="style-2">Qualités <span>professionnelles</span></h2>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-10 wow animate__animated animate__fadeInUp">
+                                <div class="row g-4">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="waypoint-box-items text-center">
+                                            <i class="fas fa-search"
+                                                style="font-size: 2rem; color: var(--primary-color);"></i>
+                                            <h4 style="margin-top: 15px;">Esprit d'analyse</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="waypoint-box-items text-center">
+                                            <i class="fas fa-user-check"
+                                                style="font-size: 2rem; color: var(--primary-color);"></i>
+                                            <h4 style="margin-top: 15px;">Autonomie et rigueur</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="waypoint-box-items text-center">
+                                            <i class="fas fa-lightbulb"
+                                                style="font-size: 2rem; color: var(--primary-color);"></i>
+                                            <h4 style="margin-top: 15px;">Résolution de problèmes</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="waypoint-box-items text-center">
+                                            <i class="fas fa-users"
+                                                style="font-size: 2rem; color: var(--primary-color);"></i>
+                                            <h4 style="margin-top: 15px;">Travail en équipe</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="waypoint-box-items text-center">
+                                            <i class="fas fa-home"
+                                                style="font-size: 2rem; color: var(--primary-color);"></i>
+                                            <h4 style="margin-top: 15px;">Travail à distance</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="waypoint-box-items text-center">
+                                            <i class="fas fa-sync-alt"
+                                                style="font-size: 2rem; color: var(--primary-color);"></i>
+                                            <h4 style="margin-top: 15px;">Adaptabilité</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="waypoint-box-items text-center">
+                                            <i class="fas fa-graduation-cap"
+                                                style="font-size: 2rem; color: var(--primary-color);"></i>
+                                            <h4 style="margin-top: 15px;">Capacité d'apprentissage</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="waypoint-box-items text-center">
+                                            <i class="fas fa-calendar-check"
+                                                style="font-size: 2rem; color: var(--primary-color);"></i>
+                                            <h4 style="margin-top: 15px;">Organisation</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1264,6 +1497,16 @@
                                     <span class="work-text wow animate__animated animate__fadeInUp"
                                         style="color: var(--primary-color); font-weight: 600;">Disponible pour
                                         mission</span>
+                                    <div class="mt-3">
+                                        <p><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i>
+                                            Bamako, Mali</p>
+                                        <p><i class="fas fa-phone" style="color: var(--primary-color);"></i> +223 77 10
+                                            55 26</p>
+                                        <p><i class="fas fa-envelope" style="color: var(--primary-color);"></i>
+                                            bagayokom2003@gmail.com</p>
+                                        <p><i class="fas fa-globe" style="color: var(--primary-color);"></i>
+                                            mariam-portfolio-cv.vercel.app</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6">
