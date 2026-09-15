@@ -1510,36 +1510,37 @@
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="contact-right-content-2">
-                                    <form action="#" id="contact-form" class="contact-form-box">
-                                        <div class="row g-4">
-                                            <div class="col-lg-6 col-md-6 wow animate__animated animate__fadeInUp">
-                                                <div class="form-clt">
-                                                    <span>Nom</span>
-                                                    <input type="text" placeholder="Votre nom">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 wow animate__animated animate__fadeInUp">
-                                                <div class="form-clt">
-                                                    <span>Email</span>
-                                                    <input type="email" placeholder="Votre email">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 wow animate__animated animate__fadeInUp">
-                                                <div class="form-clt">
-                                                    <span>Message</span>
-                                                    <textarea placeholder="Décrivez votre projet..."></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 wow animate__animated animate__fadeInUp">
-                                                <div class="contact-button">
-                                                    <button type="submit" class="theme-btn">Envoyer</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+    <div class="contact-right-content-2">
+        <form action="https://formspree.io/f/moeqggqo" method="POST" id="contact-form" class="contact-form-box">
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 wow animate__animated animate__fadeInUp">
+                    <div class="form-clt">
+                        <span>Nom</span>
+                        <input type="text" name="nom" id="contact-nom" placeholder="Votre nom" required>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow animate__animated animate__fadeInUp">
+                    <div class="form-clt">
+                        <span>Email</span>
+                        <input type="email" name="email" id="contact-email" placeholder="Votre email" required>
+                    </div>
+                </div>
+                <div class="col-lg-12 wow animate__animated animate__fadeInUp">
+                    <div class="form-clt">
+                        <span>Message</span>
+                        <textarea name="message" id="contact-message" placeholder="Décrivez votre projet..." required></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12 wow animate__animated animate__fadeInUp">
+                    <div class="contact-button">
+                        <button type="submit" class="theme-btn" id="contact-btn">Envoyer</button>
+                    </div>
+                    <p id="contact-message-status" style="margin-top: 12px; font-size: 0.9rem; display: none;"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
                         </div>
                     </div>
                 </section>
@@ -1593,21 +1594,22 @@
                                     </div>
                                 </div>
                                 <div class="col-xxl-4 col-xl-5 col-lg-6 wow animate__animated animate__fadeInUp">
-                                    <div class="footer-widget-items">
-                                        <div class="widget-head">
-                                            <h3>Restons connectés</h3>
-                                        </div>
-                                        <div class="form-area">
-                                            <form action="#">
-                                                <input type="email" placeholder="Votre email"
-                                                    style="width:100%; padding:12px; border-radius:30px; background:#1a1a1a; border:1px solid #333; color:white;">
-                                            </form>
-                                            <div class="footer-button mt-3">
-                                                <button type="submit" class="theme-btn">S'abonner</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+    <div class="footer-widget-items">
+        <div class="widget-head">
+            <h3>Restons connectés</h3>
+        </div>
+        <div class="form-area">
+            <form id="newsletter-form" action="https://formspree.io/f/moeqggqo" method="POST">
+                <input type="email" name="email" id="newsletter-email" placeholder="Votre email" required
+                    style="width:100%; padding:12px; border-radius:30px; background:#1a1a1a; border:1px solid #333; color:white;">
+                <div class="footer-button mt-3">
+                    <button type="submit" class="theme-btn" id="newsletter-btn">S'abonner</button>
+                </div>
+                <p id="newsletter-message" style="margin-top: 12px; font-size: 0.9rem; display: none;"></p>
+            </form>
+        </div>
+    </div>
+</div>
                             </div>
                         </div>
                         <div class="footer-bottom-wrapper">
@@ -1694,6 +1696,132 @@
             });
         });
     </script>
+
+
+<script>
+    // ===== NEWSLETTER FORM (Formspree) =====
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterBtn = document.getElementById('newsletter-btn');
+    const newsletterMessage = document.getElementById('newsletter-message');
+    const newsletterEmail = document.getElementById('newsletter-email');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = newsletterEmail.value.trim();
+
+            // Validation simple
+            if (!email || !email.includes('@')) {
+                newsletterMessage.style.display = 'block';
+                newsletterMessage.style.color = '#ef4444';
+                newsletterMessage.textContent = '❌ Veuillez entrer un email valide.';
+                return;
+            }
+
+            // État de chargement
+            newsletterBtn.disabled = true;
+            newsletterBtn.textContent = 'Envoi...';
+            newsletterMessage.style.display = 'none';
+
+            try {
+                const response = await fetch(newsletterForm.action, {
+                    method: 'POST',
+                    body: new FormData(newsletterForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    newsletterMessage.style.display = 'block';
+                    newsletterMessage.style.color = '#10b981';
+                    newsletterMessage.textContent = '✅ Merci ! Votre abonnement est confirmé.';
+                    newsletterForm.reset();
+                } else {
+                    const data = await response.json();
+                    throw new Error(data.error || 'Erreur serveur');
+                }
+            } catch (error) {
+                newsletterMessage.style.display = 'block';
+                newsletterMessage.style.color = '#ef4444';
+                newsletterMessage.textContent = '❌ Une erreur est survenue. Réessayez plus tard.';
+            } finally {
+                newsletterBtn.disabled = false;
+                newsletterBtn.textContent = "S'abonner";
+            }
+        });
+    }
+
+
+
+
+
+    // ===== CONTACT FORM (Formspree) =====
+    const contactForm = document.getElementById('contact-form');
+    const contactBtn = document.getElementById('contact-btn');
+    const contactStatus = document.getElementById('contact-message-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const nom = document.getElementById('contact-nom').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const message = document.getElementById('contact-message').value.trim();
+
+            // Validation
+            if (!nom || !email || !message) {
+                contactStatus.style.display = 'block';
+                contactStatus.style.color = '#ef4444';
+                contactStatus.textContent = '❌ Veuillez remplir tous les champs.';
+                return;
+            }
+
+            if (!email.includes('@')) {
+                contactStatus.style.display = 'block';
+                contactStatus.style.color = '#ef4444';
+                contactStatus.textContent = '❌ Veuillez entrer un email valide.';
+                return;
+            }
+
+            // État de chargement
+            contactBtn.disabled = true;
+            contactBtn.textContent = 'Envoi...';
+            contactStatus.style.display = 'none';
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    contactStatus.style.display = 'block';
+                    contactStatus.style.color = '#10b981';
+                    contactStatus.textContent = '✅ Merci ! Votre message a bien été envoyé. Je vous répondrai rapidement.';
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    throw new Error(data.error || 'Erreur serveur');
+                }
+            } catch (error) {
+                contactStatus.style.display = 'block';
+                contactStatus.style.color = '#ef4444';
+                contactStatus.textContent = '❌ Une erreur est survenue. Réessayez plus tard.';
+            } finally {
+                contactBtn.disabled = false;
+                contactBtn.textContent = 'Envoyer';
+            }
+        });
+    }
+
+
+    
+</script>
 </body>
 
 </html>
